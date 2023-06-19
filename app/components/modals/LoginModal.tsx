@@ -38,11 +38,11 @@ const LoginModal = () => {
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setIsLoading(true);
 
-     signIn('credentials', {
+    signIn('credentials', {
       ...data,
       redirect: false,
-     })
-     .then((callback) => {
+    })
+    .then((callback) => {
       setIsLoading(false);
 
       if (callback?.ok) {
@@ -54,7 +54,7 @@ const LoginModal = () => {
       if (callback?.error) {
         toast.error(callback.error);
       }
-     })
+    })
   }
 
   const bodyContent = (
@@ -90,7 +90,7 @@ const LoginModal = () => {
         outline
         label="Continue with Google"
         icon={FcGoogle}
-        onClick={() => {}}
+        onClick={() => signIn('google')}
       />
       <Button
         outline
