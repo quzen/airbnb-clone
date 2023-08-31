@@ -22,7 +22,7 @@ interface ListingCardProps {
 
 const ListingCard: React.FC<ListingCardProps> = ({
   currentUser,
-  key,
+  // key,
   data,
   reservation,
   onAction,
